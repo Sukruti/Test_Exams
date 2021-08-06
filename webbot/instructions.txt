@@ -1,0 +1,43 @@
+
+As part of the interview process at Woebot, we love to see what people can do when given a dataset to analyze. With that in mind, please refer to the description below outlining how to interpret an attached dataset and instructions for an analysis assignment to complete.
+
+We respect your time and we know that you have plenty of other priorities to balance alongside this interview process. While we will not enforce any specific time limits, please limit the time you spend on this assignment to no more than 2-3 hours, maximum.
+
+Please note these datasets are not representative of actual Woebot data but can be considered an approximation for the purpose of this analysis. 
+
+
+Dataset 1:  survey_responses.csv
+
+
+This dataset contains survey responses for the Working Alliance Inventory (WAI) bond subscores at two timepoints (days 4-6) and week 2 (days 14-16). The WAI bond subscore  measure was created to understand the extent to which people feel a bond with their therapist (more info in our recent publication here: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8150389/). 
+
+This simulated dataset is a sample of users who have >= 28 days of tenure using Woebot. The dataset contains one row per user per working alliance survey (not all users complete the survey at both timepoints).
+
+userid [String]: de-identified unique user id
+mobilePlatform [String]: the mobile platform (IOS or android) used at registration
+tenureDay [Integer]: the tenure day of the user on the day they completed the survey, relative to the day they registered for their account (day 0 is the day the user registered)
+waiBondSubscore [Integer]: A score from 0 to 5 measuring bond. The higher the score the greater the bond. 
+
+Dataset 2: user_activity.csv
+
+
+Population: Sample of users who have >= 28 days of tenure, and who responded to at least the first WAI survey. There is one row per user active day (where an active day is defined as a day that user sent at least one message to Woebot). There are no rows generated for days that the user did not send at least one message to Woebot.
+
+userid [String]: de-identified unique user id
+tenureDay [Integer]: Ordinal data-point representing the days since a user first registered
+userMessages [Integer]: the number of messages that the user sent to Woebot that day
+moodCategory [String]: when a user first checks in with Woebot, Woebot often asks them “How are you feeling today?” with a series of response options; these response options can generally be grouped by their valence (e.g., positive vs. neutral vs. negative moods). 
+
+
+
+Tasks
+
+
+For each task, please share your code alongside data visualizations and an explanation of your findings. 
+
+Task 1. Does the reported measure of bond change over time? Please report the average change in bond over time, and describe potential biases that should be considered when reviewing these results.
+
+Task 2. A proposed hypothesis is that bond, as measured here, is independent of user engagement. That is, (a) the formation of early bond does not depend on a user’s engagement with Woebot and (b) bond does not impact a user’s retention or activity in their first 4 weeks of tenure. Please provide 2-3 results that investigate this hypothesis.
+
+Task 3. Given what you’ve learned from the above tasks, as well as your understanding of Woebot’s existing functionality, please briefly describe 2-3 additional analyses that you feel would help understand the causal relationship between bond and engagement. What data would you need to complete these analyses?
+
